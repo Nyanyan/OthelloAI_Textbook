@@ -106,7 +106,7 @@ class othello:
         # 8方向それぞれ合法か見ていき、合法ならひっくり返す
         for dr in range(8):
             dr_legal_flag = False
-            n_flipped = 0
+            dr_n_flipped = 0
             ny = y
             nx = x
             for d in range(hw - 1):
