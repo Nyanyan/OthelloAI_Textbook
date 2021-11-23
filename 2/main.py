@@ -3,6 +3,9 @@
 # AIとの連携に使うライブラリのインポート
 import subprocess
 
+# コマンドライン引数を使うために使うライブラリ
+import sys
+
 # 定数
 hw = 8
 hw2 = 64
@@ -40,13 +43,18 @@ class othello:
     # 合法手生成 合法手が1つ以上あればTrueを、なければFalseを返す
     def check_legal(self):
         
+        # 盤面の合法手表示をなくす
+        for ny in range(hw):
+            for nx in range(hw):
+                if self.grid[ny][nx] == legal:
+                    self.grid[ny][nx] = vacant
+        
         # 返す値
         have_legal = False
         
         # 各マスについて合法かどうかチェック
         for y in range(hw):
             for x in range(hw):
-                
                 # すでに石が置いてあれば必ず非合法
                 if self.grid[y][x] != vacant:
                     continue
@@ -85,7 +93,6 @@ class othello:
     
     # 着手 着手成功ならTrueが、失敗したらFalseが返る
     def move(self, y, x):
-        
         # 置けるかの判定
         if not inside(y, x):
             print('盤面外です')
@@ -93,12 +100,6 @@ class othello:
         if self.grid[y][x] != legal:
             print('非合法手です')
             return False
-
-        # 盤面の合法手表示をなくす
-        for ny in range(hw):
-            for nx in range(hw):
-                if self.grid[ny][nx] == legal:
-                    self.grid[ny][nx] = vacant
 
         # ひっくり返した枚数(着手したぶんはカウントしない)
         n_flipped = 0
@@ -183,16 +184,104 @@ class othello:
         # 石数表示
         print('黒 X ', self.n_stones[0], '-', self.n_stones[1], ' O 白')
 
-o = othello()
-while True:
+if len(sys.argv) == 1 or sys.argv[1] == 'gui':
     
-    # 合法手生成とパス判定
-    if not o.check_legal():
-        o.player = 1 - o.player
-        
-        # 終局
+    # GUIを作るためのライブラリのインポート
+    import tkinter
+    
+    # 定数
+    offset_y = 10
+    offset_x = 10
+    rect_size = 60
+    circle_offset = 3
+    
+    o = othello()
+    legal_buttons = []
+
+    # GUI部分
+    app = tkinter.Tk()
+    app.geometry('700x500')
+    app.title('オセロAIの教科書 サンプルプログラム')
+    canvas = tkinter.Canvas(app, width=700, height = 500)
+    pixel_virtual = tkinter.PhotoImage(width=1, height=1)
+    
+    # 盤面の作成
+    for y in range(hw):
+        for x in range(hw):
+            canvas.create_rectangle(offset_x + rect_size * x, offset_y + rect_size * y, offset_x + rect_size * (x + 1), offset_y + rect_size * (y + 1), outline='black', width=2, fill='green')
+    
+    def get_coord(event):
+        global clicked, coord_y, coord_x
+        y = int(event.widget.cget('text')[0])
+        x = int(event.widget.cget('text')[2])
+        print(y, x)
+        clicked = True
+        o.move(y, x)
         if not o.check_legal():
-            break
+            o.player = 1 - o.player
+            if not o.check_legal():
+                print('終局しました')
+        o.print_info()
+        show_grid()
     
-    o.print_info()
-    o.move_stdin()
+    def show_grid():
+        print('a')
+        global clicked, legal_buttons
+        for button in legal_buttons:
+            button.place_forget()
+        legal_buttons = []
+        for y in range(hw):
+            for x in range(hw):
+                try:
+                    canvas.delete(str(y) + '_' + str(x))
+                except:
+                    pass
+                if o.grid[y][x] == vacant:
+                    continue
+                color = ''
+                if o.grid[y][x] == black:
+                    color = 'black'
+                elif o.grid[y][x] == white:
+                    color = 'white'
+                elif o.grid[y][x] == legal:
+                    color = 'cyan'
+                    legal_buttons.append(tkinter.Button(canvas, image=pixel_virtual, width=rect_size - circle_offset * 2, height=rect_size - circle_offset * 2, bg=color, text=str(y) + '_' + str(x)))
+                    legal_buttons[-1].bind('<ButtonPress>', get_coord)
+                    legal_buttons[-1].place(y=offset_y + rect_size * y, x=offset_x + rect_size * x)
+                    continue
+                canvas.create_oval(offset_x + rect_size * x + circle_offset, offset_y + rect_size * y + circle_offset, offset_x + rect_size * (x + 1) - circle_offset, offset_y + rect_size * (y + 1) - circle_offset, outline='black', width=2, fill=color, tag=str(y) + '_' + str(x))
+        #app.after(10, show_grid)
+    
+    canvas.place(y=0, x=0)
+    
+    o.check_legal()
+    show_grid()
+    app.mainloop()
+elif sys.argv[1] == 'cui':
+    o = othello()
+    while True:
+        
+        # 合法手生成とパス判定
+        if not o.check_legal():
+            o.player = 1 - o.player
+            
+            # 終局
+            if not o.check_legal():
+                break
+        
+        o.print_info()
+        o.move_stdin()
+else:
+    message = '''
+使い方
+
+【画面表示をする場合】
+    python main.py gui
+    または
+    python main.py
+
+【コマンドラインで遊ぶ場合】
+    python main.py cui
+    
+    '''
+    print(message)
