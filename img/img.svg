@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
-   sodipodi:docname="サムネイル.svg"
+   sodipodi:docname="img.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,15 +24,28 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.77771465"
-     inkscape:cx="396.03214"
-     inkscape:cy="561.25984"
+     inkscape:zoom="0.5499273"
+     inkscape:cx="426.42"
+     inkscape:cy="2179.379"
      inkscape:window-width="3840"
      inkscape:window-height="2081"
      inkscape:window-x="2391"
      inkscape:window-y="-9"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-center="true"
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-page="true" />
   <defs
      id="defs2" />
   <g
@@ -40,9 +53,9 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ffffff;fill-rule:evenodd;stroke-width:0.149841"
+       style="fill:#ffffff;fill-rule:evenodd;stroke-width:0.145604"
        id="rect43"
-       width="329.52576"
+       width="311.15463"
        height="159.90442"
        x="-37.42268"
        y="-14.350302"
@@ -85,5 +98,931 @@
          style="stroke-width:0.588845"
          x="129.33736"
          y="84.340324">1. 概観</tspan></text>
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke-width:3;stroke:#000000;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect35"
+       width="50"
+       height="50"
+       x="-167.38145"
+       y="231.34021"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-8"
+       width="50"
+       height="50"
+       x="-117.38145"
+       y="231.34021"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-0"
+       width="50"
+       height="50"
+       x="-67.381447"
+       y="231.34021"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-5"
+       width="50"
+       height="50"
+       x="-17.381447"
+       y="231.34021"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-3"
+       width="50"
+       height="50"
+       x="32.618553"
+       y="231.34021"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-6"
+       width="50"
+       height="50"
+       x="82.618553"
+       y="231.34021"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-7"
+       width="50"
+       height="50"
+       x="132.61856"
+       y="231.34023"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-08"
+       width="50"
+       height="50"
+       x="182.61856"
+       y="231.34021"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-04"
+       width="50"
+       height="50"
+       x="-170.74228"
+       y="483.26804"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-8-5"
+       width="50"
+       height="50"
+       x="-120.74229"
+       y="483.26804"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-0-4"
+       width="50"
+       height="50"
+       x="-70.742287"
+       y="483.26804"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-5-9"
+       width="50"
+       height="50"
+       x="-20.742285"
+       y="483.26804"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-3-2"
+       width="50"
+       height="50"
+       x="29.257715"
+       y="483.26804"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-6-4"
+       width="50"
+       height="50"
+       x="79.257713"
+       y="483.26804"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-7-5"
+       width="50"
+       height="50"
+       x="129.25772"
+       y="483.26804"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-08-1"
+       width="50"
+       height="50"
+       x="179.25772"
+       y="483.26804"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-04-6"
+       width="50"
+       height="50"
+       x="-170.74228"
+       y="533.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-8-5-7"
+       width="50"
+       height="50"
+       x="-120.74229"
+       y="533.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-0-4-6"
+       width="50"
+       height="50"
+       x="-70.742287"
+       y="533.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-5-9-8"
+       width="50"
+       height="50"
+       x="-20.742285"
+       y="533.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-3-2-9"
+       width="50"
+       height="50"
+       x="29.257715"
+       y="533.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-6-4-9"
+       width="50"
+       height="50"
+       x="79.257713"
+       y="533.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-7-5-8"
+       width="50"
+       height="50"
+       x="129.25772"
+       y="533.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-08-1-1"
+       width="50"
+       height="50"
+       x="179.25772"
+       y="533.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-04-2"
+       width="50"
+       height="50"
+       x="-170.74228"
+       y="583.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-8-5-77"
+       width="50"
+       height="50"
+       x="-120.74229"
+       y="583.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-0-4-0"
+       width="50"
+       height="50"
+       x="-70.742287"
+       y="583.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-5-9-9"
+       width="50"
+       height="50"
+       x="-20.742287"
+       y="583.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-3-2-1"
+       width="50"
+       height="50"
+       x="29.257721"
+       y="583.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-6-4-7"
+       width="50"
+       height="50"
+       x="79.257721"
+       y="583.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-7-5-1"
+       width="50"
+       height="50"
+       x="129.25772"
+       y="583.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-08-1-9"
+       width="50"
+       height="50"
+       x="179.25772"
+       y="583.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-04-6-1"
+       width="50"
+       height="50"
+       x="-170.74228"
+       y="633.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-8-5-7-5"
+       width="50"
+       height="50"
+       x="-120.74229"
+       y="633.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-0-4-6-6"
+       width="50"
+       height="50"
+       x="-70.742287"
+       y="633.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-5-9-8-3"
+       width="50"
+       height="50"
+       x="-20.742287"
+       y="633.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-3-2-9-7"
+       width="50"
+       height="50"
+       x="29.257721"
+       y="633.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-6-4-9-1"
+       width="50"
+       height="50"
+       x="79.257721"
+       y="633.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-7-5-8-2"
+       width="50"
+       height="50"
+       x="129.25772"
+       y="633.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-08-1-1-6"
+       width="50"
+       height="50"
+       x="179.25772"
+       y="633.26807"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-04-9"
+       width="50"
+       height="50"
+       x="-170.74228"
+       y="683.22772"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-8-5-5"
+       width="50"
+       height="50"
+       x="-120.74229"
+       y="683.22772"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-0-4-9"
+       width="50"
+       height="50"
+       x="-70.742279"
+       y="683.22772"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-5-9-83"
+       width="50"
+       height="50"
+       x="-20.742279"
+       y="683.22772"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-3-2-99"
+       width="50"
+       height="50"
+       x="29.257721"
+       y="683.22772"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-6-4-3"
+       width="50"
+       height="50"
+       x="79.257721"
+       y="683.22772"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-7-5-0"
+       width="50"
+       height="50"
+       x="129.25772"
+       y="683.22772"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-08-1-4"
+       width="50"
+       height="50"
+       x="179.25772"
+       y="683.22772"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-04-6-6"
+       width="50"
+       height="50"
+       x="-170.74228"
+       y="733.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-8-5-7-8"
+       width="50"
+       height="50"
+       x="-120.74229"
+       y="733.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-0-4-6-5"
+       width="50"
+       height="50"
+       x="-70.742279"
+       y="733.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-5-9-8-2"
+       width="50"
+       height="50"
+       x="-20.742279"
+       y="733.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-3-2-9-3"
+       width="50"
+       height="50"
+       x="29.257721"
+       y="733.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-6-4-9-3"
+       width="50"
+       height="50"
+       x="79.257721"
+       y="733.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-7-5-8-1"
+       width="50"
+       height="50"
+       x="129.25772"
+       y="733.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-08-1-1-5"
+       width="50"
+       height="50"
+       x="179.25772"
+       y="733.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-04-2-7"
+       width="50"
+       height="50"
+       x="-170.74228"
+       y="783.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-8-5-77-8"
+       width="50"
+       height="50"
+       x="-120.74229"
+       y="783.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-0-4-0-5"
+       width="50"
+       height="50"
+       x="-70.742279"
+       y="783.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-5-9-9-0"
+       width="50"
+       height="50"
+       x="-20.742279"
+       y="783.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-3-2-1-0"
+       width="50"
+       height="50"
+       x="29.257721"
+       y="783.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-6-4-7-6"
+       width="50"
+       height="50"
+       x="79.257721"
+       y="783.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-7-5-1-6"
+       width="50"
+       height="50"
+       x="129.25772"
+       y="783.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-08-1-9-1"
+       width="50"
+       height="50"
+       x="179.25772"
+       y="783.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-04-6-1-7"
+       width="50"
+       height="50"
+       x="-170.74228"
+       y="833.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-8-5-7-5-0"
+       width="50"
+       height="50"
+       x="-120.74229"
+       y="833.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-0-4-6-6-0"
+       width="50"
+       height="50"
+       x="-70.742279"
+       y="833.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-5-9-8-3-6"
+       width="50"
+       height="50"
+       x="-20.742279"
+       y="833.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-3-2-9-7-3"
+       width="50"
+       height="50"
+       x="29.257721"
+       y="833.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-6-4-9-1-8"
+       width="50"
+       height="50"
+       x="79.257721"
+       y="833.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-7-5-8-2-9"
+       width="50"
+       height="50"
+       x="129.25772"
+       y="833.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <rect
+       style="fill:#44aa00;fill-rule:evenodd;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect35-08-1-1-6-8"
+       width="50"
+       height="50"
+       x="179.25772"
+       y="833.22778"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1234"
+       cx="-142.38145"
+       cy="256.34021"
+       r="18.71134"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1234-9"
+       cx="-92.381447"
+       cy="256.34021"
+       r="18.71134"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1234-9-2"
+       cx="7.6185532"
+       cy="256.34021"
+       r="18.71134"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1234-0"
+       cx="57.618553"
+       cy="256.34021"
+       r="18.71134"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <circle
+       style="fill:#ffffff;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1234-0-2"
+       cx="107.61855"
+       cy="256.34021"
+       r="18.71134"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path1234-0-21"
+       cx="157.61856"
+       cy="256.34021"
+       r="18.71134"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:50.5627px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.26407"
+       x="-158.28888"
+       y="325.63419"
+       id="text13009"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795"><tspan
+         sodipodi:role="line"
+         id="tspan13007"
+         style="stroke-width:1.26407"
+         x="-158.28888"
+         y="325.63419">0 1 0 1 0 0 1 0=82</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:1.26407"
+         x="-158.28888"
+         y="388.83755"
+         id="tspan13013">1 0 0 0 1 1 0 0=140</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:17.224px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.4306"
+       x="-274.64719"
+       y="313.04752"
+       id="text15365"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795"><tspan
+         sodipodi:role="line"
+         id="tspan15363"
+         style="stroke-width:0.4306"
+         x="-274.64719"
+         y="313.04752">黒石のビット</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:17.224px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.4306"
+       x="-275.87546"
+       y="377.28375"
+       id="text15365-8"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795"><tspan
+         sodipodi:role="line"
+         id="tspan15363-7"
+         style="stroke-width:0.4306"
+         x="-275.87546"
+         y="377.28375">白石のビット</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:17.224px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.4306"
+       x="-189.09212"
+       y="416.84006"
+       id="text15365-8-4"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795"><tspan
+         sodipodi:role="line"
+         id="tspan15363-7-4"
+         style="stroke-width:0.4306"
+         x="-189.09212"
+         y="416.84006">桁</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20.3874px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.509684"
+       x="-162.58856"
+       y="417.46219"
+       id="text22862"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-1.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795"><tspan
+         sodipodi:role="line"
+         id="tspan22860"
+         style="stroke-width:0.509684"
+         x="-162.58856"
+         y="417.46219">128  64    32    16    8     4     2     1</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 79.257712,483.26804 229.25772,633.26806"
+       id="path34866"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 29.257715,483.26804 229.25772,683.26806"
+       id="path34868"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M -20.742285,483.26804 229.25772,733.22772"
+       id="path35085"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M -70.742285,483.26804 229.25772,783.22778"
+       id="path35087"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M -120.74229,483.26804 229.25772,833.22778"
+       id="path35089"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -170.74228,483.26804 400,399.95972"
+       id="path35091"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -170.74228,531.86162 350,349.95969"
+       id="path35093"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -170.74228,583.26805 300,299.95971"
+       id="path35095"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -170.74228,633.26806 250,249.9597"
+       id="path35097"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -170.74228,683.26806 200,199.9597"
+       id="path35099"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M -170.74228,733.22777 -20.742279,883.22776"
+       id="path35101"
+       inkscape:export-filename="C:\github\othello\OthelloAI_Textbook\img\2-2.png"
+       inkscape:export-xdpi="80.470795"
+       inkscape:export-ydpi="80.470795" />
   </g>
 </svg>
