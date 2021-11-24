@@ -248,8 +248,10 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
         if not o.check_legal():
             o.player = 1 - o.player
             if not o.check_legal():
+                o.print_info()
                 ai_exe.kill()
                 print('終局しました')
+                return
         s = ''
         if o.player == 0:
             s += '*'
@@ -278,8 +280,10 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
         if not o.check_legal():
             o.player = 1 - o.player
             if not o.check_legal():
+                o.print_info()
                 ai_exe.kill()
                 print('終局しました')
+                return
         s = ''
         if o.player == 0:
             s += '*'
