@@ -185,10 +185,10 @@ void board_init() {
 class board {
     public:
         int board_idx[n_board_idx]; // インデックス
-        int player;             // 盤面から打つ手番
-        int policy;             // 盤面に至る直前に打った手
-        int value;              // 盤面の仮の評価値(move orderingに使う)
-        int n_stones;           // 石数
+        int player;                 // 盤面から打つ手番
+        int policy;                 // 盤面に至る直前に打った手
+        int value;                  // 盤面の仮の評価値(move orderingに使う)
+        int n_stones;               // 石数
 
     public:
         // move orderingでソートするためにオペレータをオーバーロード
