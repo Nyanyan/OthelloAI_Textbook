@@ -4,11 +4,6 @@
 
 using namespace std;
 
-#define hw 8            // ボードの大きさ
-#define hw2 64          // ボードのマス数
-#define n_board_idx 38  // インデックスの個数 縦横各8x2、斜め11x2
-#define n_line 6561     // ボードの1つのインデックスが取りうる値の種類。3^8
-
 const int cell_weight[hw2] = {
     120, -20, 20, 5, 5, 20, -20, 120,
     -20, -40, -5, -5, -5, -5, -40, -20,

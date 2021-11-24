@@ -190,6 +190,20 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
     # GUIを作るためのライブラリのインポート
     import tkinter
     
+    # AIの手番の選択
+    try:
+        ai_player = int(input('AIの手番 0: 黒(先手) 1: 白(後手) : '))
+    except:
+        print('0か1を入力してください')
+        exit()
+    if ai_player != 0 and ai_player != 1:
+        print('0か1を入力してください')
+        exit()
+    
+    ai_exe = subprocess.Popen('./ai.out'.split(), stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    ai_exe.stdin.write((str(ai_player) + '\n').encode('utf-8'))
+    ai_exe.stdin.flush()
+    
     # 定数
     offset_y = 10
     offset_x = 10
@@ -217,8 +231,45 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
     stone_label = tkinter.Label(canvas, textvariable=stone_str, font=('', 50))
     stone_label.place(x=250, y=600, anchor=tkinter.CENTER)
     
+    def ai():
+        global clicked
+        grid_str = ''
+        for i in range(hw):
+            for j in range(hw):
+                grid_str += '0' if o.grid[i][j] == 0 else '1' if o.grid[i][j] == 1 else '.'
+        grid_str += '\n'
+        print(grid_str)
+        ai_exe.stdin.write(grid_str.encode('utf-8'))
+        ai_exe.stdin.flush()
+        y, x = [int(elem) for elem in ai_exe.stdout.readline().decode().split()]
+        print(y, x)
+        clicked = True
+        o.move(y, x)
+        if not o.check_legal():
+            o.player = 1 - o.player
+            if not o.check_legal():
+                ai_exe.kill()
+                print('終局しました')
+        s = ''
+        if o.player == 0:
+            s += '*'
+        else:
+            s += ' '
+        s += '● '
+        s += str(o.n_stones[0])
+        s += ' - '
+        s += str(o.n_stones[1])
+        s += ' ○'
+        if o.player == 1:
+            s += '*'
+        else:
+            s += ' '
+        stone_str.set(s)
+        o.print_info()
+        show_grid()
+    
     def get_coord(event):
-        global clicked, coord_y, coord_x
+        global clicked
         y = int(event.widget.cget('text')[0])
         x = int(event.widget.cget('text')[2])
         print(y, x)
@@ -227,6 +278,7 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
         if not o.check_legal():
             o.player = 1 - o.player
             if not o.check_legal():
+                ai_exe.kill()
                 print('終局しました')
         s = ''
         if o.player == 0:
@@ -265,21 +317,53 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
                 elif o.grid[y][x] == white:
                     color = 'white'
                 elif o.grid[y][x] == legal:
-                    color = '#3498db'
-                    legal_buttons.append(tkinter.Button(canvas, image=pixel_virtual, width=rect_size - circle_offset * 2, height=rect_size - circle_offset * 2, bg=color, text=str(y) + '_' + str(x)))
-                    legal_buttons[-1].bind('<ButtonPress>', get_coord)
-                    legal_buttons[-1].place(y=offset_y + rect_size * y, x=offset_x + rect_size * x)
+                    end_flag = False
+                    if o.player != ai_player:
+                        color = '#3498db'
+                        legal_buttons.append(tkinter.Button(canvas, image=pixel_virtual, width=rect_size - circle_offset * 2, height=rect_size - circle_offset * 2, bg=color, text=str(y) + '_' + str(x)))
+                        legal_buttons[-1].bind('<ButtonPress>', get_coord)
+                        legal_buttons[-1].place(y=offset_y + rect_size * y, x=offset_x + rect_size * x)
                     continue
                 canvas.create_oval(offset_x + rect_size * x + circle_offset, offset_y + rect_size * y + circle_offset, offset_x + rect_size * (x + 1) - circle_offset, offset_y + rect_size * (y + 1) - circle_offset, outline='black', width=2, fill=color, tag=str(y) + '_' + str(x))
-        #app.after(10, show_grid)
+        if o.player == ai_player:
+            ai()
     
     canvas.place(y=0, x=0)
-    
     o.check_legal()
     show_grid()
     app.mainloop()
+
 elif sys.argv[1] == 'cui':
+    
+    # AIの手番の選択
+    try:
+        ai_player = int(input('AIの手番 0: 黒(先手) 1: 白(後手) : '))
+    except:
+        print('0か1を入力してください')
+        exit()
+    if ai_player != 0 and ai_player != 1:
+        print('0か1を入力してください')
+        exit()
+    
+    ai_exe = subprocess.Popen('./ai.out'.split(), stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    ai_exe.stdin.write((str(ai_player) + '\n').encode('utf-8'))
+    ai_exe.stdin.flush()
+    
     o = othello()
+    
+    def ai():
+        grid_str = ''
+        for i in range(hw):
+            for j in range(hw):
+                grid_str += '0' if o.grid[i][j] == 0 else '1' if o.grid[i][j] == 1 else '.'
+        grid_str += '\n'
+        print(grid_str)
+        ai_exe.stdin.write(grid_str.encode('utf-8'))
+        ai_exe.stdin.flush()
+        y, x = [int(elem) for elem in ai_exe.stdout.readline().decode().split()]
+        print(y, x)
+        o.move(y, x)
+    
     while True:
         
         # 合法手生成とパス判定
@@ -291,7 +375,10 @@ elif sys.argv[1] == 'cui':
                 break
         
         o.print_info()
-        o.move_stdin()
+        if o.player == ai_player:
+            ai()
+        else:
+            o.move_stdin()
 else:
     message = '''
 使い方

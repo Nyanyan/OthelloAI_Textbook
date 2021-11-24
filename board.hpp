@@ -7,6 +7,9 @@ using namespace std;
 #define hw2 64          // ボードのマス数
 #define n_board_idx 38  // インデックスの個数 縦横各8x2、斜め11x2
 #define n_line 6561     // ボードの1つのインデックスが取りうる値の種類。3^8
+#define black 0         // 黒の番号
+#define white 1         // 白の番号
+#define vacant 2        // 空の番号
 
 // インデックスごとのマスの移動数
 const int move_offset[n_board_idx] = {1, 1, 1, 1, 1, 1, 1, 1, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
@@ -90,10 +93,10 @@ void board_init() {
         count_arr[idx] = 0;
         count_all_arr[idx] = 0;
         reverse_board[idx] = 0;
-        canput_arr[0][idx] = 0;
-        canput_arr[1][idx] = 0;
-        surround_arr[0][idx] = 0;
-        surround_arr[1][idx] = 0;
+        canput_arr[black][idx] = 0;
+        canput_arr[white][idx] = 0;
+        surround_arr[black][idx] = 0;
+        surround_arr[white][idx] = 0;
         for (place = 0; place < hw; ++place) {
             count_arr[idx] += 1 & (b >> place);
             count_arr[idx] -= 1 & (w >> place);
@@ -109,50 +112,50 @@ void board_init() {
             if (place > 0) {
                 if ((1 & (b >> (place - 1))) == 0 && (1 & (w >> (place - 1))) == 0) {
                     if (1 & (b >> place))
-                        ++surround_arr[0][idx];
+                        ++surround_arr[black][idx];
                     else if (1 & (w >> place))
-                        ++surround_arr[1][idx];
+                        ++surround_arr[white][idx];
                 }
             }
             if (place < hw - 1) {
                 if ((1 & (b >> (place + 1))) == 0 && (1 & (w >> (place + 1))) == 0) {
                     if (1 & (b >> place))
-                        ++surround_arr[0][idx];
+                        ++surround_arr[black][idx];
                     else if (1 & (w >> place))
-                        ++surround_arr[1][idx];
+                        ++surround_arr[white][idx];
                 }
             }
         }
         for (place = 0; place < hw; ++place) {
-            move_arr[0][idx][place][0] = move_line_half(b, w, place, 0);
-            move_arr[0][idx][place][1] = move_line_half(b, w, place, 1);
-            if (move_arr[0][idx][place][0] || move_arr[0][idx][place][1])
-                legal_arr[0][idx][place] = true;
+            move_arr[black][idx][place][0] = move_line_half(b, w, place, 0);
+            move_arr[black][idx][place][1] = move_line_half(b, w, place, 1);
+            if (move_arr[black][idx][place][0] || move_arr[black][idx][place][1])
+                legal_arr[black][idx][place] = true;
             else
-                legal_arr[0][idx][place] = false;
-            move_arr[1][idx][place][0] = move_line_half(w, b, place, 0);
-            move_arr[1][idx][place][1] = move_line_half(w, b, place, 1);
-            if (move_arr[1][idx][place][0] || move_arr[1][idx][place][1])
-                legal_arr[1][idx][place] = true;
+                legal_arr[black][idx][place] = false;
+            move_arr[white][idx][place][0] = move_line_half(w, b, place, 0);
+            move_arr[white][idx][place][1] = move_line_half(w, b, place, 1);
+            if (move_arr[white][idx][place][0] || move_arr[white][idx][place][1])
+                legal_arr[white][idx][place] = true;
             else
-                legal_arr[1][idx][place] = false;
-            if (legal_arr[0][idx][place])
-                ++canput_arr[0][idx];
-            if (legal_arr[1][idx][place])
-                ++canput_arr[1][idx];
+                legal_arr[white][idx][place] = false;
+            if (legal_arr[black][idx][place])
+                ++canput_arr[black][idx];
+            if (legal_arr[white][idx][place])
+                ++canput_arr[white][idx];
         }
         for (place = 0; place < hw; ++place) {
-            flip_arr[0][idx][place] = idx;
-            flip_arr[1][idx][place] = idx;
-            put_arr[0][idx][place] = idx;
-            put_arr[1][idx][place] = idx;
+            flip_arr[black][idx][place] = idx;
+            flip_arr[white][idx][place] = idx;
+            put_arr[black][idx][place] = idx;
+            put_arr[white][idx][place] = idx;
             if (b & (1 << (hw - 1 - place)))
-                flip_arr[1][idx][place] += pow3[hw - 1 - place];
+                flip_arr[white][idx][place] += pow3[hw - 1 - place];
             else if (w & (1 << (hw - 1 - place)))
-                flip_arr[0][idx][place] -= pow3[hw - 1 - place];
+                flip_arr[black][idx][place] -= pow3[hw - 1 - place];
             else{
-                put_arr[0][idx][place] -= pow3[hw - 1 - place] * 2;
-                put_arr[1][idx][place] -= pow3[hw - 1 - place];
+                put_arr[black][idx][place] -= pow3[hw - 1 - place] * 2;
+                put_arr[white][idx][place] -= pow3[hw - 1 - place];
             }
         }
     }
@@ -214,6 +217,16 @@ class board {
             cerr << endl;
         }
 
+        // 合法手判定
+        inline bool legal(int g_place) {
+            bool res =  legal_arr[this->player][this->board_idx[place_included[g_place][0]]][local_place[place_included[g_place][0]][g_place]] || 
+                        legal_arr[this->player][this->board_idx[place_included[g_place][1]]][local_place[place_included[g_place][1]][g_place]] || 
+                        legal_arr[this->player][this->board_idx[place_included[g_place][2]]][local_place[place_included[g_place][2]][g_place]];
+            if (place_included[g_place][3] != -1)
+                res |= legal_arr[this->player][this->board_idx[place_included[g_place][3]]][local_place[place_included[g_place][3]][g_place]];
+            return res;
+        }
+
         // 着手
         inline board move(const int g_place) {
             board res;
@@ -254,16 +267,15 @@ class board {
                 for (j = 0; j < 4; ++j) {
                     if (place_included[i][j] == -1)
                         continue;
-                    if (arr[i] == 0)
+                    if (arr[i] == black)
                         this->board_idx[place_included[i][j]] -= 2 * pow3[hw - 1 - local_place[place_included[i][j]][i]];
-                    else if (arr[i] == 1)
+                    else if (arr[i] == white)
                         this->board_idx[place_included[i][j]] -= pow3[hw - 1 - local_place[place_included[i][j]][i]];
                     else
                         --this->n_stones;
                 }
             }
             this->player = player;
-            print();
         }
 
     private:
