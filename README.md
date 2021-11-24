@@ -65,3 +65,28 @@ $ python3 main.py gui
 $ python3 main.py cui
 ```
 
+
+
+　## 目次
+
+1. 概観
+
+2. ボードの実装
+
+3. 1手読み盤面評価
+
+4. minimax
+
+5. alphabeta
+
+6. negascout
+
+7. mtd?
+
+8. 着手可能数を追加した評価
+
+9. パターンを追加した評価(深層学習)
+
+10. 定石生成
+
+11. 高速化
