@@ -67,7 +67,7 @@ $ python3 main.py cui
 
 
 
-　## 目次
+## 目次
 
 1. 概観
 
