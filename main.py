@@ -62,23 +62,25 @@ class othello:
                 # 8方向それぞれ合法か見ていく
                 legal_flag = False
                 for dr in range(8):
-                    dr_legal_flag = False
+                    dr_legal_flag1 = False
+                    dr_legal_flag2 = False
                     ny = y
                     nx = x
                     for _ in range(hw - 1):
                         ny += dy[dr]
                         nx += dx[dr]
                         if not inside(ny, nx):
-                            dr_legal_flag = False
+                            dr_legal_flag1 = False
                             break
                         elif self.grid[ny][nx] == vacant or self.grid[ny][nx] == legal:
-                            dr_legal_flag = False
+                            dr_legal_flag1 = False
                             break
                         elif self.grid[ny][nx] != self.player:
-                            dr_legal_flag = True
+                            dr_legal_flag1 = True
                         elif self.grid[ny][nx] == self.player:
+                            dr_legal_flag2 = True
                             break
-                    if dr_legal_flag:
+                    if dr_legal_flag1 and dr_legal_flag2:
                         legal_flag = True
                         break
                 
@@ -103,14 +105,13 @@ class othello:
 
         # ひっくり返した枚数(着手したぶんはカウントしない)
         n_flipped = 0
-        
         # 8方向それぞれ合法か見ていき、合法ならひっくり返す
         for dr in range(8):
             dr_legal_flag = False
             dr_n_flipped = 0
             ny = y
             nx = x
-            for d in range(hw - 2):
+            for d in range(hw - 1):
                 ny += dy[dr]
                 nx += dx[dr]
                 if not inside(ny, nx):
