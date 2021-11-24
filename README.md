@@ -34,7 +34,7 @@ $ pip3 install subprocess
 各ディレクトリ内で、C++で書かれたAIをコンパイルします。
 
 ```
-$ g++ ai.cpp -o ai.out
+$ g++ ai.cpp -o ai.out -O3
 ```
 
 ### GUI(わかりやすい画面を表示する場合)

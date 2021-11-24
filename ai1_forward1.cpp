@@ -9,6 +9,7 @@ using namespace std;
 // 初期化
 inline void init() {
     board_init();
+    evaluate_init();
 }
 
 // 標準入力からボードの状態を配列に受け取る

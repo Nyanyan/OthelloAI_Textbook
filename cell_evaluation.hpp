@@ -5,28 +5,42 @@
 using namespace std;
 
 const int cell_weight[hw2] = {
-    120, -20, 20, 5, 5, 20, -20, 120,
-    -20, -40, -5, -5, -5, -5, -40, -20,
-    20, -5, 15, 3, 3, 15, -5, 20,
-    5, -5, 3, 3, 3, 3, -5, 5,
-    5, -5, 3, 3, 3, 3, -5, 5,
-    20, -5, 15, 3, 3, 15, -5, 20,
-    -20, -40, -5, -5, -5, -5, -40, -20,
-    120, -20, 20, 5, 5, 20, -20, 120
+    30, -12, 0, -1, -1, 0, -12, 30,
+    -12, -15, -3, -3, -3, -3, -15, -12,
+    0, -3, 0, -1, -1, 0, -3, 0,
+    -1, -3, -1, -1, -1, -1, -3, -1,
+    -1, -3, -1, -1, -1, -1, -3, -1,
+    0, -3, 0, -1, -1, 0, -3, 0,
+    -12, -15, -3, -3, -3, -3, -15, -12,
+    30, -12, 0, -1, -1, 0, -12, 30
 };
 
-int evaluate(board *b) {
-    int board_arr[hw2];
-    int res = 0, i, j;
-    b->translate_to_arr(board_arr);
-    for (i = 0; i < hw; ++i) {
-        for (j = 0; j < hw; ++j) {
-            if (board_arr[i * hw + j] == b->player)
-                res += cell_weight[i * hw + j];
-            else if (board_arr[i * hw + j] == 1 - b->player)
-                res -= cell_weight[i * hw + j];
+int cell_score[hw / 2][n_line];      // 盤面のインデックス(行のインデックス)において黒番目線のスコアを前計算しておく
+
+inline void evaluate_init() {
+    int idx, i, place, b, w;
+    for (idx = 0; idx < n_line; ++idx) {
+        b = create_one_color(idx, 0);
+        w = create_one_color(idx, 1);
+        for (i = 0; i < hw / 2; ++i)
+            cell_score[i][idx] = 0;
+        for (place = 0; place < hw; ++place) {
+            for (i = 0; i < hw / 2; ++i) {
+                cell_score[i][idx] += (1 & (b >> place)) * cell_weight[i * hw + place];
+                cell_score[i][idx] -= (1 & (w >> place)) * cell_weight[i * hw + place];
+            }
         }
     }
+}
+
+inline int evaluate(board *b) {
+    int res = 0, i;
+    for (i = 0; i < hw / 2; ++i)
+        res += cell_score[i][b->board_idx[i]];
+    for (i = 0; i < hw / 2; ++i)
+        res += cell_score[hw / 2 - 1 - i][b->board_idx[hw / 2 + i]];
+    if (b->player == white)
+        res = -res;
     return res;
 }
 

@@ -26,11 +26,7 @@ int flip_arr[2][n_line][hw];        // flip_arr[プレイヤー][ボードのイ
 int put_arr[2][n_line][hw];         // put_arr[プレイヤー][ボードのインデックス][マスの位置] = ボードのインデックスのマスの位置に着手した後のインデックス
 int local_place[n_board_idx][hw2];  // local_place[インデックス番号][マスの位置] = そのインデックス番号におけるマスのローカルな位置
 int place_included[hw2][4];         // place_included[マスの位置] = そのマスが関わるインデックス番号の配列(3つのインデックスにしか関わらない場合は最後の要素に-1が入る)
-int count_arr[n_line];              // count_arr[ボードのインデックス] = そのインデックスでの黒石数 - 白石数
-int count_all_arr[n_line];          // count_all_arr[ボードのインデックス] = そのインデックスでの黒石数 + 白石数
 int reverse_board[n_line];          // reverse_board[ボードのインデックス] = そのインデックスにおけるボードの前後反転
-int canput_arr[2][n_line];          // canput_arr[プレイヤー][ボードのインデックス] = そのインデックスでプレイヤーが着手可能な位置
-int surround_arr[2][n_line];        // surround_arr[プレイヤー][ボードのインデックス] = そのインデックスでプレイヤーが空マスに接している数
 int pow3[11];                       // pow3[i] = 3^i
 int pop_digit[n_line][hw];          // pop_digit[ボードのインデックス][i] = そのインデックスの左からi番目の値(3進数なので0か1か2)
 int pop_mid[n_line][hw][hw];        // pop_mid[ボードのインデックス][i][j] = そのインデックスの左からi番目、左からj番目に挟まれる場所の値
@@ -90,18 +86,7 @@ void board_init() {
     for (idx = 0; idx < n_line; ++idx) {
         b = create_one_color(idx, 0);
         w = create_one_color(idx, 1);
-        count_arr[idx] = 0;
-        count_all_arr[idx] = 0;
-        reverse_board[idx] = 0;
-        canput_arr[black][idx] = 0;
-        canput_arr[white][idx] = 0;
-        surround_arr[black][idx] = 0;
-        surround_arr[white][idx] = 0;
         for (place = 0; place < hw; ++place) {
-            count_arr[idx] += 1 & (b >> place);
-            count_arr[idx] -= 1 & (w >> place);
-            count_all_arr[idx] += 1 & (b >> place);
-            count_all_arr[idx] += 1 & (w >> place);
             reverse_board[idx] *= 3;
             if (1 & (b >> place))
                 reverse_board[idx] += 0;
@@ -109,22 +94,6 @@ void board_init() {
                 reverse_board[idx] += 1;
             else
                 reverse_board[idx] += 2;
-            if (place > 0) {
-                if ((1 & (b >> (place - 1))) == 0 && (1 & (w >> (place - 1))) == 0) {
-                    if (1 & (b >> place))
-                        ++surround_arr[black][idx];
-                    else if (1 & (w >> place))
-                        ++surround_arr[white][idx];
-                }
-            }
-            if (place < hw - 1) {
-                if ((1 & (b >> (place + 1))) == 0 && (1 & (w >> (place + 1))) == 0) {
-                    if (1 & (b >> place))
-                        ++surround_arr[black][idx];
-                    else if (1 & (w >> place))
-                        ++surround_arr[white][idx];
-                }
-            }
         }
         for (place = 0; place < hw; ++place) {
             move_arr[black][idx][place][0] = move_line_half(b, w, place, 0);
@@ -139,10 +108,6 @@ void board_init() {
                 legal_arr[white][idx][place] = true;
             else
                 legal_arr[white][idx][place] = false;
-            if (legal_arr[black][idx][place])
-                ++canput_arr[black][idx];
-            if (legal_arr[white][idx][place])
-                ++canput_arr[white][idx];
         }
         for (place = 0; place < hw; ++place) {
             flip_arr[black][idx][place] = idx;
