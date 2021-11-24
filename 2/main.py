@@ -110,13 +110,13 @@ class othello:
             dr_n_flipped = 0
             ny = y
             nx = x
-            for d in range(hw - 1):
+            for d in range(hw - 2):
                 ny += dy[dr]
                 nx += dx[dr]
                 if not inside(ny, nx):
                     dr_legal_flag = False
                     break
-                elif self.grid[ny][nx] == vacant:
+                elif self.grid[ny][nx] == vacant or self.grid[ny][nx] == legal:
                     dr_legal_flag = False
                     break
                 elif self.grid[ny][nx] != self.player:
@@ -200,15 +200,21 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
 
     # GUI部分
     app = tkinter.Tk()
-    app.geometry('700x500')
+    app.geometry('500x700')
     app.title('オセロAIの教科書 サンプルプログラム')
-    canvas = tkinter.Canvas(app, width=700, height = 500)
+    canvas = tkinter.Canvas(app, width=500, height = 700)
     pixel_virtual = tkinter.PhotoImage(width=1, height=1)
     
     # 盤面の作成
     for y in range(hw):
         for x in range(hw):
-            canvas.create_rectangle(offset_x + rect_size * x, offset_y + rect_size * y, offset_x + rect_size * (x + 1), offset_y + rect_size * (y + 1), outline='black', width=2, fill='green')
+            canvas.create_rectangle(offset_x + rect_size * x, offset_y + rect_size * y, offset_x + rect_size * (x + 1), offset_y + rect_size * (y + 1), outline='black', width=2, fill='#16a085')
+    
+    # 石数表示
+    stone_str = tkinter.StringVar()
+    stone_str.set('*● 2 - 2 ○ ')
+    stone_label = tkinter.Label(canvas, textvariable=stone_str, font=('', 50))
+    stone_label.place(x=250, y=600, anchor=tkinter.CENTER)
     
     def get_coord(event):
         global clicked, coord_y, coord_x
@@ -221,11 +227,25 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
             o.player = 1 - o.player
             if not o.check_legal():
                 print('終局しました')
+        s = ''
+        if o.player == 0:
+            s += '*'
+        else:
+            s += ' '
+        s += '● '
+        s += str(o.n_stones[0])
+        s += ' - '
+        s += str(o.n_stones[1])
+        s += ' ○'
+        if o.player == 1:
+            s += '*'
+        else:
+            s += ' '
+        stone_str.set(s)
         o.print_info()
         show_grid()
     
     def show_grid():
-        print('a')
         global clicked, legal_buttons
         for button in legal_buttons:
             button.place_forget()
@@ -244,7 +264,7 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
                 elif o.grid[y][x] == white:
                     color = 'white'
                 elif o.grid[y][x] == legal:
-                    color = 'cyan'
+                    color = '#3498db'
                     legal_buttons.append(tkinter.Button(canvas, image=pixel_virtual, width=rect_size - circle_offset * 2, height=rect_size - circle_offset * 2, bg=color, text=str(y) + '_' + str(x)))
                     legal_buttons[-1].bind('<ButtonPress>', get_coord)
                     legal_buttons[-1].place(y=offset_y + rect_size * y, x=offset_x + rect_size * x)
