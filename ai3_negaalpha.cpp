@@ -62,7 +62,7 @@ int search(board b, int depth) {
     int coord, res = -1, score, alpha = -inf, beta = inf;
     for (coord = 0; coord < hw2; ++coord) {
         if (b.legal(coord)) {
-            score = -nega_alpha(b.move(coord), depth, false, -beta, -alpha);
+            score = -nega_alpha(b.move(coord), depth - 1, false, -beta, -alpha);
             if (alpha < score) {
                 alpha = score;
                 res = coord;
@@ -84,7 +84,7 @@ int main() {
         b.translate_from_arr(arr, ai_player);
         cerr << evaluate(b) << endl;
         b.print();
-        policy = search(b, 6);
+        policy = search(b, 7);
         cout << policy / hw << " " << policy % hw << endl;
     }
     return 0;

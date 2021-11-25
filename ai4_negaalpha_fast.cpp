@@ -118,7 +118,7 @@ int search(board b, int depth) {
             sort(child_nodes.begin(), child_nodes.end());
         }
         for (board nb: child_nodes) {
-            score = -nega_alpha_transpose(nb, search_depth, false, -beta, -alpha);
+            score = -nega_alpha_transpose(nb, search_depth - 1, false, -beta, -alpha);
             if (alpha < score) {
                 alpha = score;
                 res = nb.policy;
@@ -142,7 +142,7 @@ int main() {
         b.translate_from_arr(arr, ai_player);
         cerr << evaluate(b) << endl;
         b.print();
-        policy = search(b, 9);
+        policy = search(b, 10);
         cout << policy / hw << " " << policy % hw << endl;
     }
     return 0;
