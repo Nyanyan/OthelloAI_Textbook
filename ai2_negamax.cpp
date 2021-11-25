@@ -27,7 +27,7 @@ inline void input_board(int arr[]) {
 }
 
 // negamax法
-int nega_max(board b, int depth) {
+int nega_max(board b, int depth, bool passed) {
     // 葉ノードでは評価関数を実行する
     if (depth == 0)
         return evaluate(b);
@@ -35,7 +35,15 @@ int nega_max(board b, int depth) {
     int coord, max_score = -inf;
     for (coord = 0; coord < hw2; ++coord) {
         if (b.legal(coord))
-            max_score = max(max_score, -nega_max(b.move(coord), depth - 1));
+            max_score = max(max_score, -nega_max(b.move(coord), depth - 1, false));
+    }
+    // パスの処理 手番を交代して同じ深さで再帰する
+    if (max_score == -inf) {
+        // 2回連続パスなら評価関数を実行
+        if (passed)
+            return evaluate(b);
+        b.player = 1 - b.player;
+        return -nega_max(b, depth, true);
     }
     return max_score;
 }
@@ -45,7 +53,7 @@ int search(board b, int depth) {
     int coord, max_score = -inf, res = -1, score;
     for (coord = 0; coord < hw2; ++coord) {
         if (b.legal(coord)) {
-            score = -nega_max(b.move(coord), depth);
+            score = -nega_max(b.move(coord), depth, false);
             if (max_score < score) {
                 max_score = score;
                 res = coord;
