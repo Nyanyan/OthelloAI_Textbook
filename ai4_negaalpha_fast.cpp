@@ -35,6 +35,7 @@ inline void input_board(int arr[]) {
     }
 }
 
+// move ordering用評価値の計算
 inline int calc_move_ordering_value(const board b) {
     int res;
     if (former_transpose_table.find(b) != former_transpose_table.end()) {
