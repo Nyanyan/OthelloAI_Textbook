@@ -6,6 +6,8 @@ using namespace std;
 
 #define inf 100000000 // 大きな値
 
+unsigned long long visited_nodes; // 訪問ノード数
+
 // 初期化
 inline void init() {
     board_init();
@@ -28,6 +30,7 @@ inline void input_board(int arr[]) {
 
 // negaalpha法
 int nega_alpha(board b, int depth, bool passed, int alpha, int beta) {
+    ++visited_nodes;
     // 葉ノードでは評価関数を実行する
     if (depth == 0)
         return evaluate(b);
@@ -55,6 +58,7 @@ int nega_alpha(board b, int depth, bool passed, int alpha, int beta) {
 
 // depth手読みの探索
 int search(board b, int depth) {
+    visited_nodes = 0;
     int coord, res = -1, score, alpha = -inf, beta = inf;
     for (coord = 0; coord < hw2; ++coord) {
         if (b.legal(coord)) {
@@ -65,6 +69,7 @@ int search(board b, int depth) {
             }
         }
     }
+    cerr << "searched nodes " << visited_nodes << endl;
     return res;
 }
 

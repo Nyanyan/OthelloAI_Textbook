@@ -161,6 +161,43 @@ class board {
             return value > another.value;
         }
 
+        // ハッシュテーブル(unordered_map)で使う同値判定
+        bool operator==(const board& another) const {
+            if (this->player != another.player)
+                return false;
+            for (int i = 0; i < hw; ++i) {
+                if (this->board_idx[i] != another.board_idx[i])
+                    return false;
+            }
+            return true;
+        }
+
+        // ハッシュテーブル(unordered_map)で使う非同値判定
+        bool operator!=(const board& another) const {
+            return !(this->operator==(another));
+        }
+
+        // ハッシュテーブル(unordered_map)に使うハッシュ関数
+        struct hash {
+            typedef size_t result_type;
+
+            // ハッシュテーブルで使うためのハッシュ関数
+            // hash = sum(i=0からi=7)(インデックス[i] * 17^i)
+            // 17を使うとやたら性能が良い。
+            size_t operator()(const board& b) const {
+                return
+                    b.board_idx[0] + 
+                    b.board_idx[1] * 17 + 
+                    b.board_idx[2] * 289 + 
+                    b.board_idx[3] * 4913 + 
+                    b.board_idx[4] * 83521 + 
+                    b.board_idx[5] * 1419857 + 
+                    b.board_idx[6] * 24137549 + 
+                    b.board_idx[7] * 410338673;
+            }
+        };
+
+
         // ボードのコンソールへの表示
         inline void print() {
             int i, j, tmp;
