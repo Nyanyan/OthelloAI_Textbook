@@ -7,8 +7,8 @@
 
 using namespace std;
 
-#define inf 100000000 // 大きな値
-#define cache_hit_bonus 1000 // 前回の探索で枝刈りされなかったノードへのボーナス
+#define inf 100000000           // 大きな値
+#define cache_hit_bonus 1000    // 前回の探索で枝刈りされなかったノードへのボーナス
 
 unordered_map<board, int, board::hash> transpose_table;          // 現在の探索結果を入れる置換表: 同じ局面に当たった時用
 unordered_map<board, int, board::hash> former_transpose_table;   // 前回の探索結果が入る置換表: move orderingに使う
@@ -40,7 +40,7 @@ inline int calc_move_ordering_value(const board b) {
     int res;
     if (former_transpose_table.find(b) != former_transpose_table.end()) {
         // 前回の探索で枝刈りされなかった
-        res = cache_hit_bonus + former_transpose_table[b];
+        res = cache_hit_bonus - former_transpose_table[b];
     } else {
         // 前回の探索で枝刈りされた
         res = -evaluate(b);
@@ -51,12 +51,15 @@ inline int calc_move_ordering_value(const board b) {
 // move orderingと置換表つきnegaalpha法
 int nega_alpha_transpose(board b, int depth, bool passed, int alpha, int beta) {
     ++visited_nodes;
+
     // 葉ノードでは評価関数を実行する
     if (depth == 0)
         return evaluate(b);
+    
     // 同じ局面に遭遇したらハッシュテーブルの値を返す
     if (transpose_table.find(b) != transpose_table.end())
         return transpose_table[b];
+    
     // 葉ノードでなければ子ノードを列挙
     int coord, g, max_score = -inf, canput = 0;
     vector<board> child_nodes;
@@ -67,6 +70,7 @@ int nega_alpha_transpose(board b, int depth, bool passed, int alpha, int beta) {
             ++canput;
         }
     }
+    
     // パスの処理 手番を交代して同じ深さで再帰する
     if (canput == 0) {
         // 2回連続パスなら評価関数を実行
@@ -75,9 +79,12 @@ int nega_alpha_transpose(board b, int depth, bool passed, int alpha, int beta) {
         b.player = 1 - b.player;
         return -nega_alpha_transpose(b, depth, true, -beta, -alpha);
     }
+    
     // move ordering実行
     if (canput >= 2)
         sort(child_nodes.begin(), child_nodes.end());
+    
+    // 探索
     for (const board& nb: child_nodes) {
         g = -nega_alpha_transpose(nb, depth - 1, false, -beta, -alpha);
         if (g >= beta) // 興味の範囲よりもminimax値が上のときは枝刈り
@@ -85,6 +92,7 @@ int nega_alpha_transpose(board b, int depth, bool passed, int alpha, int beta) {
         alpha = max(alpha, g);
         max_score = max(max_score, g);
     }
+    
     // 置換表に登録
     transpose_table[b] = max_score;
     return max_score;

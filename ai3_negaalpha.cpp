@@ -31,9 +31,11 @@ inline void input_board(int arr[]) {
 // negaalpha法
 int nega_alpha(board b, int depth, bool passed, int alpha, int beta) {
     ++visited_nodes;
+    
     // 葉ノードでは評価関数を実行する
     if (depth == 0)
         return evaluate(b);
+    
     // 葉ノードでなければ子ノード全部に対して再帰する
     int coord, g, max_score = -inf;
     for (coord = 0; coord < hw2; ++coord) {
@@ -45,6 +47,7 @@ int nega_alpha(board b, int depth, bool passed, int alpha, int beta) {
             max_score = max(max_score, g);
         }
     }
+    
     // パスの処理 手番を交代して同じ深さで再帰する
     if (max_score == -inf) {
         // 2回連続パスなら評価関数を実行
@@ -53,6 +56,7 @@ int nega_alpha(board b, int depth, bool passed, int alpha, int beta) {
         b.player = 1 - b.player;
         return -nega_alpha(b, depth, true, -beta, -alpha);
     }
+    
     return max_score;
 }
 
