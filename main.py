@@ -330,7 +330,7 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
                     continue
                 canvas.create_oval(offset_x + rect_size * x + circle_offset, offset_y + rect_size * y + circle_offset, offset_x + rect_size * (x + 1) - circle_offset, offset_y + rect_size * (y + 1) - circle_offset, outline='black', width=2, fill=color, tag=str(y) + '_' + str(x))
         if o.player == ai_player:
-            ai()
+            app.after(10, ai)
     
     canvas.place(y=0, x=0)
     o.check_legal()
