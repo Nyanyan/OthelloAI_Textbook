@@ -5,7 +5,7 @@
 
 ## 概要
 
-このレポジトリは記事集オセロAIの教科書のサンプルプログラムです。
+このレポジトリは記事集[オセロAIの教科書](https://note.com/nyanyan_cubetech/m/m54104c8d2f12)のサンプルプログラムです。
 
 
 
@@ -69,15 +69,17 @@ $ python3 main.py cui
 
 ## 目次
 
+記事集全体はこちら: https://note.com/nyanyan_cubetech/m/m54104c8d2f12
+
 1. 概観
 2. ボードの実装
 3. 1手読みAI
 4. minimax
 5. alphabeta
 6. negascout
-7. multi prob cut
-8. 着手可能数を追加した評価
-9. パターンを追加した評価(深層学習)
-10. 定石生成
+7. 評価関数
+8. 定石
+9. 終盤探索
+10. 枝刈り
 11. 高速化
-12. 採用しなかった他手法
+
