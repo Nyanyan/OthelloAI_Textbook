@@ -89,5 +89,6 @@ create_book('f5f4', 0)
 print(len(book))
 
 with open('book.txt', 'w') as f:
+    f.write('f5\n')
     for r in book.keys():
         f.write(r + book[r] + '\n')
