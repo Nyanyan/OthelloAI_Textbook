@@ -287,7 +287,7 @@ int main() {
         b.translate_from_arr(arr, ai_player);
         cerr << evaluate(b) << endl;
         b.print();
-        policy = search(b, 10);
+        policy = search(b, 9);
         cout << policy / hw << " " << policy % hw << endl;
     }
     return 0;
