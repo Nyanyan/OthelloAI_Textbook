@@ -275,7 +275,7 @@ inline void evaluate_init() {
 
 // 着手可能数 黒の手番なら正の値、白の手番では負の値にする 世界1位AIの手動for展開の名残があります
 inline int calc_mobility(const board b){
-    return (b.player ? -1 : 1) * 
+    return (b.player ? -1 : 1) * (
         mobility_arr[b.player][b.board_idx[0]] + mobility_arr[b.player][b.board_idx[1]] + mobility_arr[b.player][b.board_idx[2]] + mobility_arr[b.player][b.board_idx[3]] + 
         mobility_arr[b.player][b.board_idx[4]] + mobility_arr[b.player][b.board_idx[5]] + mobility_arr[b.player][b.board_idx[6]] + mobility_arr[b.player][b.board_idx[7]] + 
         mobility_arr[b.player][b.board_idx[8]] + mobility_arr[b.player][b.board_idx[9]] + mobility_arr[b.player][b.board_idx[10]] + mobility_arr[b.player][b.board_idx[11]] + 
@@ -285,7 +285,7 @@ inline int calc_mobility(const board b){
         mobility_arr[b.player][b.board_idx[18] - p33 + 1] + mobility_arr[b.player][b.board_idx[24] - p33 + 1] + mobility_arr[b.player][b.board_idx[29] - p33 + 1] + mobility_arr[b.player][b.board_idx[35] - p33 + 1] + 
         mobility_arr[b.player][b.board_idx[19] - p32 + 1] + mobility_arr[b.player][b.board_idx[23] - p32 + 1] + mobility_arr[b.player][b.board_idx[30] - p32 + 1] + mobility_arr[b.player][b.board_idx[34] - p32 + 1] + 
         mobility_arr[b.player][b.board_idx[20] - p31 + 1] + mobility_arr[b.player][b.board_idx[22] - p31 + 1] + mobility_arr[b.player][b.board_idx[31] - p31 + 1] + mobility_arr[b.player][b.board_idx[33] - p31 + 1] + 
-        mobility_arr[b.player][b.board_idx[21]] + mobility_arr[b.player][b.board_idx[32]];
+        mobility_arr[b.player][b.board_idx[21]] + mobility_arr[b.player][b.board_idx[32]]);
 }
 
 // 囲み具合
