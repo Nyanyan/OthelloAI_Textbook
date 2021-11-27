@@ -273,7 +273,7 @@ class board {
                         this->board_idx[place_included[i][j]] -= 2 * pow3[hw - 1 - local_place[place_included[i][j]][i]];
                     else if (arr[i] == white)
                         this->board_idx[place_included[i][j]] -= pow3[hw - 1 - local_place[place_included[i][j]][i]];
-                    else
+                    else if (j == 0)
                         --this->n_stones;
                 }
             }

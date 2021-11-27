@@ -28,16 +28,16 @@ inline void endgame_evaluate_init() {
 }
 
 inline int endgame_evaluate(const board b){
-    int count = 0, vacant = hw2;
+    int count = 0, n_vacant = hw2;
     for (int i = 0; i < hw; ++i) {
-        count += count_arr[i];
-        vacant -= count_all_arr[i];
+        count += count_arr[b.board_idx[i]];
+        n_vacant -= count_all_arr[b.board_idx[i]];
     }
     if (b.player == 1)
         count = -count;
     if (count > 0)
-        count += vacant;
+        count += n_vacant;
     else if (count < 0)
-        count -= vacant;
+        count -= n_vacant;
     return count * step;
 }
