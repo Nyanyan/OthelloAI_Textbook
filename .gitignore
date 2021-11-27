@@ -1,2 +1,5 @@
 img
 ai.out
+__pycache__
+evaluation/evaluate.out
+evaluation/__pycache__
