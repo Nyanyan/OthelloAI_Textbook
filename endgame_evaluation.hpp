@@ -10,7 +10,7 @@ using namespace std;
 int count_arr[n_line];              // count_arr[ボードのインデックス] = そのインデックスでの黒石数 - 白石数
 int count_all_arr[n_line];          // count_all_arr[ボードのインデックス] = そのインデックスでの黒石数 + 白石数
 
-// 着手可能数と囲み度合いの前計算
+// 石数の前計算
 inline void endgame_evaluate_init() {
     int idx, i, place, b, w;
     for (idx = 0; idx < n_line; ++idx) {
