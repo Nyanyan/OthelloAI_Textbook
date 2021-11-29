@@ -44,6 +44,13 @@ if len(sys.argv) == 1 or sys.argv[1] == 'gui':
     canvas = tkinter.Canvas(app, width=500, height = 700)
     pixel_virtual = tkinter.PhotoImage(width=1, height=1)
     
+    def on_closing():
+        global ai_exe
+        ai_exe.kill()
+        app.destroy()
+
+    app.protocol("WM_DELETE_WINDOW", on_closing)
+    
     # 盤面の作成
     for y in range(hw):
         for x in range(hw):
