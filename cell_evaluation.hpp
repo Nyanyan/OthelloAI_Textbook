@@ -33,17 +33,13 @@ inline void evaluate_init() {
     }
 }
 
-inline int evaluate(board *b) {
+inline int evaluate(board b) {
     int res = 0, i;
     for (i = 0; i < hw / 2; ++i)
-        res += cell_score[i][b->board_idx[i]];
+        res += cell_score[i][b.board_idx[i]];
     for (i = 0; i < hw / 2; ++i)
-        res += cell_score[hw / 2 - 1 - i][b->board_idx[hw / 2 + i]];
-    if (b->player == white)
+        res += cell_score[hw / 2 - 1 - i][b.board_idx[hw / 2 + i]];
+    if (b.player == white)
         res = -res;
     return res;
-}
-
-int evaluate(board b) {
-    return evaluate(&b);
 }
