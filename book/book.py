@@ -15,7 +15,7 @@ def translate_coord(coord):
 
 # 棋譜から扱いやすいデータを作る
 records = []
-for num in range(12):
+for num in range(20):
     with open('self_play/' + digit(num, 7) + '.txt', 'r') as f:
         records.extend(list(f.read().splitlines()))
 record_all = {}
@@ -47,7 +47,7 @@ book = {}
 
 max_ln = 45
 
-num_threshold1 = 3
+num_threshold1 = 4
 
 inf = 100000000
 

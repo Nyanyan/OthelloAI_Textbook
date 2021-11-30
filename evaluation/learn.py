@@ -20,7 +20,7 @@ def digit(n, r):
 
 # 棋譜から盤面データを作る
 records = []
-for num in range(12):
+for num in range(20):
     with open('self_play/' + digit(num, 7) + '.txt', 'r') as f:
         records.extend(list(f.read().splitlines()))
 data = []
