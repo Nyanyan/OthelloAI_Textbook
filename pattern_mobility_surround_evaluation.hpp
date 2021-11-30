@@ -42,7 +42,7 @@ double final_bias;
 
 // 着手可能数と囲み度合いの前計算
 inline void evaluate_init1() {
-    int idx, i, place, b, w;
+    int idx, place, b, w;
     for (idx = 0; idx < n_line; ++idx) {
         b = create_one_color(idx, 0);
         w = create_one_color(idx, 1);
@@ -338,7 +338,7 @@ inline double triangle1(const int b[], int w, int x, int y, int z){
 // パターン評価部分
 inline double calc_pattern(const board b){
     return
-        final_dense[0] * (pattern_arr[6][b.board_idx[21]] + pattern_arr[6][b.board_idx[32]]) + 
+        final_dense[0] * (pattern_arr[0][b.board_idx[21]] + pattern_arr[0][b.board_idx[32]]) + 
         final_dense[1] * (edge_2x(b.board_idx, 1, 0) + edge_2x(b.board_idx, 6, 7) + edge_2x(b.board_idx, 9, 8) + edge_2x(b.board_idx, 14, 15)) + 
         final_dense[2] * (triangle0(b.board_idx, 0, 1, 2, 3) + triangle0(b.board_idx, 7, 6, 5, 4) + triangle0(b.board_idx, 15, 14, 13, 12) + triangle1(b.board_idx, 15, 14, 13, 12));
 }
@@ -349,6 +349,6 @@ inline int evaluate(const board b){
     mobility = min(max_mobility * 2, max(0, max_mobility + calc_mobility(b)));
     sur0 = min(max_surround, calc_surround(b, 0));
     sur1 = min(max_surround, calc_surround(b, 1));
-    double res = (b.player ? -1 : 1) * (final_bias + calc_pattern(b) + final_dense[3] * add_arr[mobility][sur0][sur1]);
+    double res = (b.player ? -1.0 : 1.0) * (final_bias + calc_pattern(b) + final_dense[3] * add_arr[mobility][sur0][sur1]);
     return (int)(max(-1.0, min(1.0, res)) * sc_w);
 }

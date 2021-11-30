@@ -518,7 +518,7 @@ int main() {
         if (b.n_stones >= hw2 - complete_depth)
             policy = search_final(b);
         else
-            policy = search(b, 9);
+            policy = search(b, 8);
         cout << policy / hw << " " << policy % hw << endl;
     }
     return 0;

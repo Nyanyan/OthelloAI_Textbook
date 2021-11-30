@@ -295,7 +295,7 @@ int main() {
             cout << policy / hw << " " << policy % hw << endl;
             continue;
         }
-        policy = search(b, 9);
+        policy = search(b, 8);
         cout << policy / hw << " " << policy % hw << endl;
     }
     return 0;

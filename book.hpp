@@ -16,7 +16,7 @@ inline void book_init() {
     }
     string line;
     board b;
-    int i, y, x, policy;
+    int i, y, x;
     int n = 0;
     const int first_board[n_board_idx] = {6560, 6560, 6560, 6425, 6371, 6560, 6560, 6560, 6560, 6560, 6560, 6425, 6371, 6560, 6560, 6560, 6560, 6560, 6560, 6560, 6398, 6452, 6398, 6560, 6560, 6560, 6560, 6560, 6560, 6560, 6560, 6479, 6344, 6479, 6560, 6560, 6560, 6560};
     while (true) {
@@ -29,7 +29,7 @@ inline void book_init() {
         b.player = 0;
         for (i = 0; i < n_board_idx; ++i)
             b.board_idx[i] = first_board[i];
-        for (i = 0; i < line.size() - 2; i += 2) {
+        for (i = 0; i < (int)line.size() - 2; i += 2) {
             x = (int)(line[i]) - (int)'a';
             y = (int)(line[i + 1]) - (int)'1';
             b = b.move(y * hw + x);
@@ -41,7 +41,7 @@ inline void book_init() {
         b.player = 0;
         for (i = 0; i < n_board_idx; ++i)
             b.board_idx[i] = first_board[i];
-        for (i = 0; i < line.size() - 2; i += 2) {
+        for (i = 0; i < (int)line.size() - 2; i += 2) {
             x = (int)(line[i]) - (int)'a';
             y = (int)(line[i + 1]) - (int)'1';
             b = b.move(x * hw + y);
@@ -53,7 +53,7 @@ inline void book_init() {
         b.player = 0;
         for (i = 0; i < n_board_idx; ++i)
             b.board_idx[i] = first_board[i];
-        for (i = 0; i < line.size() - 2; i += 2) {
+        for (i = 0; i < (int)line.size() - 2; i += 2) {
             x = (int)(line[i]) - (int)'a';
             y = (int)(line[i + 1]) - (int)'1';
             b = b.move((hw - 1 - y) * hw + hw - 1 - x);
@@ -65,7 +65,7 @@ inline void book_init() {
         b.player = 0;
         for (i = 0; i < n_board_idx; ++i)
             b.board_idx[i] = first_board[i];
-        for (i = 0; i < line.size() - 2; i += 2) {
+        for (i = 0; i < (int)line.size() - 2; i += 2) {
             x = (int)(line[i]) - (int)'a';
             y = (int)(line[i + 1]) - (int)'1';
             b = b.move((hw - 1 - x) * hw + hw - 1 - y);
