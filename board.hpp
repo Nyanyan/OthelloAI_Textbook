@@ -221,9 +221,9 @@ class board {
 
         // 合法手判定
         inline bool legal(int g_place) {
-            bool res =  legal_arr[this->player][this->board_idx[place_included[g_place][0]]][local_place[place_included[g_place][0]][g_place]] || 
-                        legal_arr[this->player][this->board_idx[place_included[g_place][1]]][local_place[place_included[g_place][1]][g_place]] || 
-                        legal_arr[this->player][this->board_idx[place_included[g_place][2]]][local_place[place_included[g_place][2]][g_place]];
+            bool res = false;
+            for (int i = 0; i < 3; ++i)
+                res |= legal_arr[this->player][this->board_idx[place_included[g_place][i]]][local_place[place_included[g_place][i]][g_place]];
             if (place_included[g_place][3] != -1)
                 res |= legal_arr[this->player][this->board_idx[place_included[g_place][3]]][local_place[place_included[g_place][3]][g_place]];
             return res;
@@ -239,9 +239,8 @@ class board {
             move_p(&res, g_place, 2);
             if (place_included[g_place][3] != -1)
                 move_p(&res, g_place, 3);
-            res.board_idx[place_included[g_place][0]] = put_arr[this->player][res.board_idx[place_included[g_place][0]]][local_place[place_included[g_place][0]][g_place]];
-            res.board_idx[place_included[g_place][1]] = put_arr[this->player][res.board_idx[place_included[g_place][1]]][local_place[place_included[g_place][1]][g_place]];
-            res.board_idx[place_included[g_place][2]] = put_arr[this->player][res.board_idx[place_included[g_place][2]]][local_place[place_included[g_place][2]][g_place]];
+            for (int i = 0; i < 3; ++i)
+                res.board_idx[place_included[g_place][i]] = put_arr[this->player][res.board_idx[place_included[g_place][i]]][local_place[place_included[g_place][i]][g_place]];
             if (place_included[g_place][3] != -1)
                 res.board_idx[place_included[g_place][3]] = put_arr[this->player][res.board_idx[place_included[g_place][3]]][local_place[place_included[g_place][3]][g_place]];
             res.player = 1 - this->player;
@@ -283,9 +282,8 @@ class board {
     private:
         // 石をひっくり返す
         inline void flip(board *res, int g_place) {
-            res->board_idx[place_included[g_place][0]] = flip_arr[this->player][res->board_idx[place_included[g_place][0]]][local_place[place_included[g_place][0]][g_place]];
-            res->board_idx[place_included[g_place][1]] = flip_arr[this->player][res->board_idx[place_included[g_place][1]]][local_place[place_included[g_place][1]][g_place]];
-            res->board_idx[place_included[g_place][2]] = flip_arr[this->player][res->board_idx[place_included[g_place][2]]][local_place[place_included[g_place][2]][g_place]];
+            for (int i = 0; i < 3; ++i)
+                res->board_idx[place_included[g_place][i]] = flip_arr[this->player][res->board_idx[place_included[g_place][i]]][local_place[place_included[g_place][i]][g_place]];
             if (place_included[g_place][3] != -1)
                 res->board_idx[place_included[g_place][3]] = flip_arr[this->player][res->board_idx[place_included[g_place][3]]][local_place[place_included[g_place][3]][g_place]];
         }
